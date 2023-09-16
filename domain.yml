@@ -1,0 +1,122 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_name
+  - tim_kiem_thuc_tap
+  - thoi_gian_thuc_tap
+  - dieu_kien_thuc_tap
+  - noi_dung_thuc_tap
+  - nhiem_vu_thuc_tap
+  - cach_tinh_diem
+  - cach_danh_gia
+responses:
+  utter_greet:
+  - text: "Xin chào! Tôi có thể giúp gì cho bạn?"
+
+  utter_cheer_up:
+  - text: "Rất cảm ơn bạn đã đến đây."
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Tạm biệt! Nếu bạn cần thêm sự giúp đỡ, hãy quay lại bất kỳ lúc nào."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  utter_unclear:
+  - text: "Xin lỗi bạn, hiện tại tôi chưa hiểu được yêu cầu của bạn"
+  utter_ask_name:
+    - text: "Em họ Chat, tên Bot! Người ta hay gọi em là Chat Bot thông minh xinh đẹp giỏi giang nhất vũ trụ ạ! Anh chị cần trợ giúp gì ạ?"
+  utter_tim_kiem_thuc_tap:
+    - text: "Theo dõi trang web của trường hoặc khoa của bạn để xem thông báo về các vị trí thực tập.
+    \nSử dụng các trang web tuyển dụng trực tuyến như LinkedIn, Glassdoor, hay Indeed để tìm các vị trí thực tập tại các công ty. 
+    \nLiên hệ với giáo viên hướng dẫn hoặc các chuyên viên tư vấn nghề nghiệp để biết thêm về các cơ hội thực tập."
+  utter_thoi_gian_thuc_tap:
+    - text: "Thời gian thực tập sẽ được thông báo cụ thể trước khi bắt đầu học phần thực tập thực tế. 
+    \nThông thường, thực tập được diễn ra vào học kì hè và có thể kéo dài 8 tuần"
+  utter_dieu_kien_thuc_tap:
+    - text: "Khi tổng số tín chỉ tích lũy của bạn lớn hơn hoặc bằng 120 tín chỉ bạn sẽ được học nhé!"
+  utter_noi_dung_thuc_tap:
+    - text: "Bạn sẽ trải qua 8 tuần thực tập trong môi trường thực tế. Mục đích của đợt thực tập này là để giúp bạn:
+    \n (1) Củng cố kiến thức đã được trang bị trong nhà trường, vận dụng những kiến thức đó vào trong môi trường thực tế.
+    \n (2) Rèn luyện ý thức chấp hành kỷ luật lao động, thái độ giao tiếp với mọi người, phát huy tinh thần học hỏi, chủ động sáng tạo trong công việc."
+  utter_nhiem_vu_thuc_tap:
+    - text: "Nhiệm vụ của bạn phải thực hiện như sau:
+    \n - Đăng ký thực tập thực tế và đóng học phí (học kỳ hè) như những môn học khác. Nếu không đăng ký thì kết quả thực tập thực tế sẽ không được công nhận.
+    \n - Bạn phải tham dự các buổi họp sinh viên để nghe phổ biến các qui định và xem danh sách phân công chính thức nơi thực tập. Bạn nhận các giấy tờ có liên quan để đi thực tập.
+    \n - Bạn cần thực tập ở cơ quan/công ty theo đúng thời gian và nội dung công việc được giao.
+    \n - Bạn phải nộp một quyển báo cáo thực tập về cho cán bộ hướng dẫn ở Trường sau khi kết thúc đợt thực tập ( nếu bạn thực hiến nhóm thì ghi rõ các công việc mà mỗi người đã thực hiện )"
+
+  utter_cach_tinh_diem:
+    - text: "Cách tính điểm của học phần thực tập thực tế như sau:
+    \n - Điểm do cán bộ hướng dẫn tại cơ quan/công ty và cán bộ hướng dẫn tại Khoa được chấm theo thang điểm 10 (từ - 0 đến 10), làm tròn đến một chữ số thập phân.
+    \n - Điểm học phần là tổng điểm của tất cả các điểm đánh giá thành phần của học phần nhân với trọng số tương ứng. Điểm học phần theo thang điểm 10 làm tròn đến một chữ số thập phân,
+     sau đó được quy đổi sang điểm chữ và điểm số theo thang điểm 4 theo quy định về công tác học vụ của Trường"
+  utter_cach_danh_gia:
+    - text: "Cách đánh giá học phần thực tập thực tế gồm các điểm thành phần như sau:
+    \n - Điểm do cán bộ hướng dẫn tại cơ quan/công ty chấm trong Phiếu đánh giá kết quả thực tập chiếm 60% (Tổng điểm từ 0-10.0):
+    \n    I. Tinh thần kỷ luật: 4.0đ
+    \n      I.1 Thực hiện nội quy cơ quan: 1.0đ
+    \n      I.2 Chấp nhận giờ giấc làm việc: 1.0đ
+    \n      I.3 Thái độ giao tiếp với cán bộ trong đơn vị: 1.0đ
+    \n      I.4 Tích cực trong công việc: 1.0đ
+    \n    II. Khả năng chuyên môn, nghiệp vụ: 3.0đ
+    \n      II.1 Đáp ứng yêu cầu công việc: 1.0đ
+    \n      II.2 Tinh thần học hỏi nâng cao trình độ, chuyên môn, nghiệp vụ 1.0đ
+    \n      II.3 Có đề xuất, sáng kiến, năng động trong công việc: 1.0đ
+    \n    III. Kết quả công tác: 3.0đ
+    \n      III.1 Báo cáo tiến độ công việc cho cán bộ hướng dẫn mỗi tuần 1 lần: 1.0đ
+    \n      III.2 Hoàn thành công việc được giao: 1.0đ
+    \n      III.3 Kết quả công việc có đóng góp cho cơ quan thực tập: 1.0đ
+    \n - Điểm do cán bộ hướng dẫn tại Khoa chấm trong Phiếu đánh giá kết quả thực tập chiếm 40% (Tổng điểm từ 0-10.0):    
+    \n    I. Hình thức trình bày: 1.0đ
+    \n      I.1 Đúng định dạng của Khoa: 0.5đ
+    \n      I.2 Trình bày mạch lạc súc tích, không có lỗi chính tả: 0.5đ
+    \n    II. Phiếu theo dõi: 4.75đ
+    \n      II.1 Có lịch làm việc cho 8 tuần: 0.25đ
+    \n      II.2 Số buổi thực ập tại cơ quan trong 1 tuần >= 6: 1.0đ
+    \n      II.3 Hoàn thành tốt kế hoach công tác đã được ghi trong lịch làm việc, cách tính = (Điểm cộng các cán bộ hướng dẫn/100)x3.5: 3.5đ
+    \n    III. Nội dung thực tập (quyển báo cáo): 4.25đ
+    \n      III.1 Có được sự hiểu biết tốt về cơ quan - nơi thực tập: 0.5đ
+    \n      III.2 Phương pháp thực hiện phù hợp với nội dung công việc được giao: 1.0đ
+    \n      III.3 Kết quả củng cố lý thuyết: 0.5đ
+    \n      III.4 Kết quả rèn luyện kỹ năng thực hành: 0.5đ
+    \n      III.5 Kinh nghiệm thực tiễn thu nhận được: 0.5đ
+    \n      III.6 Kết quả công việc có đóng góp cho cơ quan thực tập: 1.25đ
+    \n    IV. Điểm trừ: -2.0đ
+    \n      IV.1 Không tham dự buổi phổ biến Thực tập thực tế: -1.0đ
+    \n      IV.2 Không gửi phiếu giao việc về Khoa đúng hạn: -1.0đ"
+
+
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_unclear
+  - utter_ask_name
+  - utter_tim_kiem_thuc_tap
+  - utter_thoi_gian_thuc_tap
+  - utter_dieu_kien_thuc_tap
+  - utter_nhiem_vu_thuc_tap
+  - utter_cach_tinh_diem
+  - utter_cach_danh_gia
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

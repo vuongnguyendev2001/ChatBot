@@ -1,0 +1,162 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - xin chào
+    - chào bạn
+    - hello
+    - hi
+    - hey
+    - mình có vài câu hỏi
+    - có ai giúp mình không
+    - bạn ơi
+    - anh ơi
+    - chị ơi
+    - cháu ơi
+    - hello 
+    - chào 
+    - hi 
+    - có ai ở đây không?
+
+- intent: goodbye
+  examples: |
+    - tạm biệt
+    - chào tạm biệt
+    - chào tạm biệt em
+    - tạm biệt em
+    - tạm biệt em nhé
+
+- intent: thank
+  examples: |
+    - chuẩn
+    - hay
+    - siêu
+    - tuyệt
+    - cám ơn
+    - thanks
+    - thank you
+    - ok
+    - cảm ơn em
+    - cảm ơn em nhiều nhé
+    - cảm ơn
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_name
+  examples: |
+    - bạn tên gì
+    - tên gì
+    - chị tên gì
+    - anh tên gì
+    - tên của bạn là gì
+    - tên của chị là gì
+    - tên của anh là gì
+    - cho mình hỏi tên nhé
+    - mình muốn biết tên bạn
+    - mình muốn tiện xưng hộ hơn, cho mình biết tên nhé
+    - để tiện xưng hộ thì tên bạn là gì
+    - cho em xin tên của anh ạ
+    - cho em xin tên của chị ạ
+    - được biết tên bạn thì tốt nhỉ
+    - vui lòng cho mình biết tên nhé
+    - xin phép hỏi tên của bạn
+    - vậy thì tên bạn là gì
+    - tên bạn trong tiếng việt là gì
+    - bạn có vui lòng cho mình biết tên được không
+    - chúng ta nên biết tên nhau nhỉ?
+    - em tên là gì thế
+    - tên em là gì
+    - tên em 
+    - tên bạn 
+    - bạn tên là gì 
+    - bạn tên gì thế
+    - em tên gì
+
+- intent: dieu_kien_thuc_tap
+  examples: |
+    - Điều kiện thực tập
+    - Điều kiện để em có thể học học phần thực tập thực tế?
+    - Em có thể học học phần thực tập thực tế khi nào?
+
+- intent: tim_kiem_thuc_tap
+  examples: |
+    - Làm thế nào để tìm kiếm cơ hội thực tập thực tế?
+    - Tôi có thể tìm kiếm nơi thực tập ở đâu?
+
+- intent: thoi_gian_thuc_tap
+  examples: |
+    - Thực tập diễn ra trong khoảng thời gian nào?
+    - Khi nào bắt đầu diễn ra thực tập thực tế?
+
+- intent: noi_dung_thuc_tap
+  examples: |
+    - Nội dung của học phần thực tập thực tế là gì?
+    - Nội dung học phần là gì?
+
+- intent: nhiem_vu_thuc_tap
+  examples: |
+    - Nhiệm vụ của tôi trong học phần thực tập thực tế là gì?
+    - Nhiệm vụ học phần là gì?
+
+- intent: cach_tinh_diem
+  examples: |
+    - Cách tích điểm của phần thực tập thực tế ra sao?
+    - Cho tôi hỏi về cách tính điểm học phần?
+    - Cách tính điểm của học phần này?
+
+- intent: cach_danh_gia
+  examples: |
+    - Cách đánh giá của phần thực tập thực tế ra sao?
+    - Cho tôi hỏi về cách đánh giá học phần?
+    - Cách đánh giá của học phần này?

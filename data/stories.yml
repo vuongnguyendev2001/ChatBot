@@ -1,0 +1,82 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+## Chào - hỏi tên - chào
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_name
+  - action: utter_ask_name
+  - intent: goodbye
+  - action: utter_goodbye
+
+## Địa điểm thực tập
+- story: tim_kiem_thuc_tap
+  steps:
+  - intent: tim_kiem_thuc_tap
+  - action: utter_tim_kiem_thuc_tap
+
+## Thời gian thực tập
+- story: thoi_gian_thuc_tap
+  steps:
+  - intent: thoi_gian_thuc_tap
+  - action: utter_thoi_gian_thuc_tap
+
+## Điều kiện thực tập
+- story: dieu_kien_thuc_tap
+  steps:
+  - intent: dieu_kien_thuc_tap
+  - action: utter_dieu_kien_thuc_tap
+
+## Nội dung thực tập
+- story: noi_dung_thuc_tap
+  steps:
+  - intent: noi_dung_thuc_tap
+  - action: utter_noi_dung_thuc_tap
+
+## Nhiệm vụ thực tập
+- story: nhiem_vu_thuc_tap
+  steps:
+  - intent: nhiem_vu_thuc_tap
+  - action: utter_nhiem_vu_thuc_tap
+
+## Cách tính điểm học phần
+- story: cach_tinh_diem
+  steps:
+  - intent: cach_tinh_diem
+  - action: utter_cach_tinh_diem
+
+## Cách đánh giá học phần
+- story: cach_danh_gia
+  steps:
+  - intent: cach_danh_gia
+  - action: utter_cach_danh_gia
