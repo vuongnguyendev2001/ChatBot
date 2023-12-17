@@ -1,5 +1,4 @@
 version: "3.1"
-
 nlu:
 - intent: greet
   examples: |
@@ -18,7 +17,6 @@ nlu:
     - chào 
     - hi 
     - có ai ở đây không?
-
 - intent: goodbye
   examples: |
     - tạm biệt
@@ -26,73 +24,6 @@ nlu:
     - chào tạm biệt em
     - tạm biệt em
     - tạm biệt em nhé
-
-- intent: thank
-  examples: |
-    - chuẩn
-    - hay
-    - siêu
-    - tuyệt
-    - cám ơn
-    - thanks
-    - thank you
-    - ok
-    - cảm ơn em
-    - cảm ơn em nhiều nhé
-    - cảm ơn
-
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-    
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-
 - intent: ask_name
   examples: |
     - bạn tên gì
@@ -122,41 +53,137 @@ nlu:
     - bạn tên là gì 
     - bạn tên gì thế
     - em tên gì
-
+- intent: don_vi_thuc_tap
+  examples: |
+    - Đơn vị thực tập?
+    - Em có thể thực tập tại các đơn vị như thế nào?
+    - Đơn vị thực tập nào được chấp thuận?
+    - Em có lưu ý gì khi chọn đơn vị thực tập không?
+    - Bạn có thể cho tôi vài địa chỉ thực tập không?
+- intent: chuan_bi_thuc_tap
+  examples: |
+    - Làm thế nào để chuẩn bị cho thực tập thực tế?
+    - Cần chuẩn bị những gì cho thực tập thực tế?
+    - Chuẩn bị gì cho thực tập thực tế?
+    - Em có thể chuẩn bị gì trước khi đi thực tập?
+    - Trước khi đi thực tập em cần chuẩn bị gì?
 - intent: dieu_kien_thuc_tap
   examples: |
     - Điều kiện thực tập
-    - Điều kiện để em có thể học học phần thực tập thực tế?
-    - Em có thể học học phần thực tập thực tế khi nào?
-
+    - Điều kiện để tham gia học học phần thực tập thực tế là gì?
+    - Em cần đáp ứng những yêu cầu gì để được học học phần thực tập thực tế?
+    - Thành phần điều kiện tham gia học phần thực tập thực tế như thế nào?
+    - Học phần thực tập thực tế có những điều kiện đặc biệt nào không?
+    - Anh/chị có thể giải thích về điều kiện học học phần thực tập không?
+    - Học phần thực tập yêu cầu em phải đáp ứng điều kiện gì?
+    - Điều kiện tham gia học phần thực tập thực tế khá phức tạp phải không?
 - intent: tim_kiem_thuc_tap
   examples: |
+    - Cách tìm kiếm nơi thực tập?
     - Làm thế nào để tìm kiếm cơ hội thực tập thực tế?
     - Tôi có thể tìm kiếm nơi thực tập ở đâu?
-
+    - Cách tốt nhất để tìm kiếm cơ hội thực tập là gì?
+    - Có nguồn thông tin nào để tìm kiếm vị trí thực tập không?
+    - Bạn có gợi ý cho tôi cách tìm kiếm thực tập hiệu quả không?
+    - Nơi nào tôi nên tìm kiếm thông tin về thực tập thực tế?
+    - Đâu là cách tốt nhất để tìm cơ hội thực tập?
+    - Có trang web hoặc nguồn thông tin nào về các nơi thực tập mà bạn biết không?
+    - Tôi đang tìm cách bắt đầu với việc tìm kiếm thực tập, bạn có gợi ý gì không?
+    - Làm thế nào để tìm kiếm nơi thực tập phù hợp với kĩ năng bản thân?
+    - Làm thế nào để tìm kiếm nơi thực tập phù hợp với kĩ năng bản thân
 - intent: thoi_gian_thuc_tap
   examples: |
     - Thực tập diễn ra trong khoảng thời gian nào?
     - Khi nào bắt đầu diễn ra thực tập thực tế?
-
+    - Lịch trình thực tập là gì?
+    - Thời gian học phần thực tập bắt đầu và kết thúc là khi nào?
+    - Khi nào là thời điểm tốt nhất để tham gia thực tập?
+    - Thời gian tối ưu để bắt đầu thực tập là khi nào?
+    - Làm thế nào để biết thời gian cụ thể của thực tập?
+    - Thời gian thực tập có thể linh động không?
+    - Thực tập có thể bắt đầu vào thời gian nào trong năm?
+    - Tôi cần biết về thời gian thực tập để sắp xếp kế hoạch, bạn có thông tin chi tiết không?
 - intent: noi_dung_thuc_tap
   examples: |
     - Nội dung của học phần thực tập thực tế là gì?
-    - Nội dung học phần là gì?
-
+    - Học phần thực tập bao gồm những gì?
+    - Có thể cho tôi biết về chương trình học của thực tập thực tế không?
+    - Môn học trong khóa thực tập nói về gì?
+    - Thông tin chi tiết về nội dung học phần của thực tập thực tế là gì?
+    - Để hiểu rõ hơn về nội dung thực tập, bạn có thể cung cấp thông tin chi tiết hơn không?
+    - Có những chủ đề nào được bao gồm trong học phần thực tập?
+    - Nếu tôi tham gia thực tập, tôi sẽ được học về những gì?
+    - Có sách giáo trình hoặc tài liệu nào liên quan đến nội dung học phần không?
+    - Xin vui lòng mô tả nội dung học phần của khóa thực tập.
+    - Có những kỹ năng cụ thể nào mà tôi sẽ phát triển khi tham gia thực tập thực tế?
+    - Nếu tôi muốn biết về nội dung học phần chi tiết hơn, tôi cần làm gì?
+    - TTTT thì các công ty sẽ đào tạo những gì, có giao công việc liên quan tới dự án thực tế không?
 - intent: nhiem_vu_thuc_tap
   examples: |
-    - Nhiệm vụ của tôi trong học phần thực tập thực tế là gì?
-    - Nhiệm vụ học phần là gì?
-
+    - Nhiệm vụ cụ thể của tôi trong học phần thực tập thực tế là gì?
+    - Nhiệm vụ học phần thực tập là gì?
+    - Cụ thể, tôi phải làm gì khi tham gia thực tập thực tế?
+    - Nhiệm vụ của tôi sẽ bao gồm những công việc gì trong thực tập?
+    - Xin vui lòng mô tả chi tiết nhiệm vụ của tôi học phần thực tập.
+    - Tôi cần hiểu rõ về công việc mà mình phải thực hiện trong thực tập. Bạn có thể giải thích thêm không?
 - intent: cach_tinh_diem
   examples: |
-    - Cách tích điểm của phần thực tập thực tế ra sao?
-    - Cho tôi hỏi về cách tính điểm học phần?
-    - Cách tính điểm của học phần này?
-
+    - Cách tính điểm của phần thực tập thực tế là gì?
+    - Cho tôi hỏi về quy trình tính điểm cho học phần này?
+    - Làm thế nào để tính điểm học phần thực tập thực tế?
+    - Xin vui lòng giải thích cách tính điểm học phần này.
+    - Có yêu cầu gì đặc biệt trong quá trình tính điểm cho thực tập không?
+    - Làm thế nào để đạt điểm cao trong học phần thực tập?
+    - Cách tính điểm học phần TTTT?
 - intent: cach_danh_gia
   examples: |
     - Cách đánh giá của phần thực tập thực tế ra sao?
-    - Cho tôi hỏi về cách đánh giá học phần?
-    - Cách đánh giá của học phần này?
+    - Cho tôi hỏi về quá trình đánh giá học phần thực tập?
+    - Làm thế nào để học phần này được đánh giá?
+    - Xin vui lòng giải thích cách học phần thực tập được đánh giá.
+    - Có tiêu chí đánh giá cụ thể nào không?
+    - Làm thế nào để đạt kết quả tốt trong quá trình đánh giá học phần?
+- intent: ho_tro
+  examples: |
+    - Có sự hỗ trợ và hướng dẫn từ giáo viên hướng dẫn không?
+    - Có ai hỗ trợ tôi trong quá trình thực tập không?
+    - Ai sẽ là người giám sát và hướng dẫn tôi trong thời gian thực tập?
+    - Có một người cụ thể hoặc mentor dành riêng cho thực tập sinh không?
+    - Tôi có được hỗ trợ không?
+    - Hỗ trợ
+- intent: luong_thuc_tap
+  examples: |
+    - Thực tập có được trả lương không?
+    - Thực tập có được phụ cấp không?
+    - Thực tập có được nhận lương không?
+- intent: lap_trinh_ung_dung_di_dong
+  examples: |
+    - Lập trình ứng dụng di động?
+    - Tôi muốn học lập trình ứng dụng di động nên bắt đầu từ đâu?
+    - Lập trình ứng dụng di động nên học như thế nào?
+    - Cách học lập trình ứng dụng di động?
+    - Cách học lập trình mobile app?
+    - Tôi muốn học lập trình mobile app nên bắt đầu từ đâu?
+- intent: lap_trinh_website
+  examples: |
+    - Lập trình web?
+    - Lập trình website?
+    - Tôi muốn học lập trình web di động nên bắt đầu từ đâu?
+    - Lập trình web nên học như thế nào?
+    - Cách học lập trình web?
+    - Cách học lập trình website?
+    - Tôi muốn học lập trình web nên bắt đầu từ đâu?
+- intent: khong_tim_duoc_noi_thuc_tap
+  examples: |
+    - Nếu như không tìm được nơi để xin intern thì nhà trường sẽ xếp mình thực tập ở đâu?
+    - Không tìm được nơi thực tập?
+    - Nếu em không tìm được nơi TTTT thì sao admin?
+    - Em dở quá không nơi nào nhận em thì sao hả bot?
+    - Kỹ năng em yếu quá thì sao hả bot?
+- intent: thuc_tap_o_tp_lon
+  examples: |
+   - Em có dự định lên thành phố thực tập vậy anh nghĩ có nên không?
+   - Có nên thực tập ở thành phố lớn không?
+   - Em có nên đi thành phố lớn để thực tập không?
+   - Thực tập ở thành phố lớn có lợi ích gì không?
+#157 câu hỏi
