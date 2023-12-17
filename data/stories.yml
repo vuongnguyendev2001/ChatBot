@@ -2,42 +2,11 @@ version: "3.1"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
-
 ## Chào - hỏi tên - chào
 - story: greet
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: ask_name
-  - action: utter_ask_name
-  - intent: goodbye
-  - action: utter_goodbye
 
 ## Địa điểm thực tập
 - story: tim_kiem_thuc_tap
@@ -80,3 +49,50 @@ stories:
   steps:
   - intent: cach_danh_gia
   - action: utter_cach_danh_gia
+
+## Hỗ trợ
+- story: ho_tro
+  steps:
+  - intent: ho_tro
+  - action: utter_ho_tro
+
+## Lương thực tập
+- story: luong_thuc_tap
+  steps:
+  - intent: luong_thuc_tap
+  - action: utter_luong_thuc_tap
+
+- story: utter_chuan_bi_thuc_tap
+  steps:
+  - intent: chuan_bi_thuc_tap
+  - action: utter_chuan_bi_thuc_tap
+
+- story: utter_lap_trinh_ung_dung_di_dong
+  steps:
+  - intent: lap_trinh_ung_dung_di_dong
+  - action: utter_lap_trinh_ung_dung_di_dong
+
+- story: utter_lap_trinh_website
+  steps:
+  - intent: lap_trinh_website
+  - action: utter_lap_trinh_website
+
+- story: utter_don_vi_thuc_tap
+  steps:
+    - intent: don_vi_thuc_tap
+    - action: utter_don_vi_thuc_tap
+
+- story: utter_khong_tim_duoc_noi_thuc_tap
+  steps:
+    - intent: khong_tim_duoc_noi_thuc_tap
+    - action: utter_khong_tim_duoc_noi_thuc_tap
+
+- story: utter_thuc_tap_o_tp_lon
+  steps:
+    - intent: thuc_tap_o_tp_lon
+    - action: utter_thuc_tap_o_tp_lon
+
+#- story: Handle fallback
+#  steps:
+#  - intent: fallback
+#  - action: action_handle_fallback
