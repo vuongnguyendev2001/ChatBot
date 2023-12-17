@@ -5,46 +5,109 @@ recipe: default.v1
 # The assistant project unique identifier
 # This default value must be replaced with a unique assistant name within your deployment
 assistant_id: 20230831-175124-linear-cabernet
-
+#   - name: WhitespaceTokenizer
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
 language: vi
 
 pipeline:
+- name: SpacyNLP
+  model: vi_core_news_lg
+- name: SpacyTokenizer
+- name: SpacyFeaturizer
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: DIETClassifier
+  epochs: 100
+  constrain_similarities: true
+- name: FallbackClassifier
+  threshold: 0.8
+
+#  ambiguity_threshold: 0.1
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
 # # If you'd like to customize it, uncomment and adjust the pipeline.
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
 #   - name: WhitespaceTokenizer
-#   - name: VietnameseTokenizer
-   - name: SpacyNLP
-     model: vi_core_news_lg
-   - name: SpacyTokenizer
-   - name: SpacyFeaturizer
-   - name: RegexFeaturizer
-   - name: LexicalSyntacticFeaturizer
-   - name: CountVectorsFeaturizer
-   - name: CountVectorsFeaturizer
-     analyzer: char_wb
-#     analyzer: word
-     min_ngram: 1
-     max_ngram: 4
-   - name: DIETClassifier
-     epochs: 100
-     constrain_similarities: true
-   - name: EntitySynonymMapper
-   - name: ResponseSelector
-     epochs: 100
-     constrain_similarities: true
-   - name: FallbackClassifier
-     threshold: 0.6
-     ambiguity_threshold: 0.1
-   - name: VietnameseTokenizer
-#policies:
-#  - name: MemoizationPolicy
-#  - name: TEDPolicy
-#  - name: MyCustomPolicy
-#    path: /path/to/my_callback.py
+#   - name: RegexFeaturizer
+#   - name: LexicalSyntacticFeaturizer
+#   - name: CountVectorsFeaturizer
+#   - name: CountVectorsFeaturizer
+#     analyzer: char_wb
+#     min_ngram: 1
+#     max_ngram: 4
+#   - name: DIETClassifier
+#     epochs: 100
+#     constrain_similarities: true
+#   - name: EntitySynonymMapper
+#   - name: ResponseSelector
+#     epochs: 100
+#     constrain_similarities: true
+#   - name: FallbackClassifier
+#     threshold: 0.3
+#     ambiguity_threshold: 0.1
 
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+#policies: null
+policies:
+  - name: RulePolicy
+    core_fallback_threshold: 0.6  # Điều chỉnh ngưỡng tại đây
+    core_fallback_action_name: action_default_fallback
+  - name: MemoizationPolicy
+    max_history: 5
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 200  # hoặc số lượng epochs phù hợp
+    constrain_similarities: false  # có thể thử tắt đi xem kết quả lỗi
+
+# # No configuration for policies was provided. The following default policies were used to train your model.
+# # If you'd like to customize them, uncomment and adjust the policies.
+# # See https://rasa.com/docs/rasa/policies for more information.
+#   - name: MemoizationPolicy
+#   - name: RulePolicy
+#   - name: UnexpecTEDIntentPolicy
+#     max_history: 5
+#     epochs: 100
+#   - name: TEDPolicy
+#     max_history: 5
+#     epochs: 100
+#     constrain_similarities: true
+
+
+# # No configuration for policies was provided. The following default policies were used to train your model.
+# # If you'd like to customize them, uncomment and adjust the policies.
+# # See https://rasa.com/docs/rasa/policies for more information.
+#   - name: MemoizationPolicy
+#   - name: RulePolicy
+#   - name: UnexpecTEDIntentPolicy
+#     max_history: 5
+#     epochs: 100
+#   - name: TEDPolicy
+#     max_history: 5
+#     epochs: 100
+#     constrain_similarities: true
+
+#    enable_fallback_prediction: true
+#    restrict_rules: true
+#    check_for_contradictions: true
+# # No configuration for policies was provided. The following default policies were used to train your model.
+# # If you'd like to customize them, uncomment and adjust the policies.
+# # See https://rasa.com/docs/rasa/policies for more information.
+#   - name: MemoizationPolicy
+#   - name: RulePolicy
+#   - name: UnexpecTEDIntentPolicy
+#     max_history: 5
+#     epochs: 100
+#   - name: TEDPolicy
+#     max_history: 5
+#     epochs: 100
+#     constrain_similarities: true
+
+#actions:
+#  - actions.action_default_fallback
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 # # No configuration for policies was provided. The following default policies were used to train your model.
@@ -59,7 +122,33 @@ pipeline:
 #     max_history: 5
 #     epochs: 100
 #     constrain_similarities: true
-policies:
+#policies:
+# # No configuration for policies was provided. The following default policies were used to train your model.
+# # If you'd like to customize them, uncomment and adjust the policies.
+# # See https://rasa.com/docs/rasa/policies for more information.
+#   - name: MemoizationPolicy
+#   - name: RulePolicy
+#   - name: UnexpecTEDIntentPolicy
+#     max_history: 5
+#     epochs: 100
+#   - name: TEDPolicy
+#     max_history: 5
+#     epochs: 100
+#     constrain_similarities: true
+#policies:
+# # No configuration for policies was provided. The following default policies were used to train your model.
+# # If you'd like to customize them, uncomment and adjust the policies.
+# # See https://rasa.com/docs/rasa/policies for more information.
+#   - name: MemoizationPolicy
+#   - name: RulePolicy
+#   - name: UnexpecTEDIntentPolicy
+#     max_history: 5
+#     epochs: 100
+#   - name: TEDPolicy
+#     max_history: 5
+#     epochs: 100
+#     constrain_similarities: true
+#policies:
 # # No configuration for policies was provided. The following default policies were used to train your model.
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
